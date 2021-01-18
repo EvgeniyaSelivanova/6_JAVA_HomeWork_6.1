@@ -2,7 +2,7 @@ package ru.netology.stats;
 
 public class StatsService {
 
-    public long totalsummonth(long SumMonths[]) {
+    public long totalSumMonth(long SumMonths[]) {
         long Sum = 0;
         for (long SumMonth : SumMonths) {
             if (SumMonth >= 0) {
@@ -12,20 +12,20 @@ public class StatsService {
         return Sum;
     }
 
-    public long averagesummonth(long SumMonths[]) {
+    public long averageSumMonth(long SumMonths[]) {
         long Month = 0;
         for (long SumMonth : SumMonths) {
-            Month = Month + 1;
+            Month ++;
         }
-        return totalsummonth(SumMonths) / Month;
+        return totalSumMonth(SumMonths) / SumMonths.length;
     }
 
-    public long maxamountmonth(long SumMonths[]) {
+    public long maxAmountMonth(long SumMonths[]) {
         long CurrentMonth = SumMonths[0];
         long Month = 0;
         long MaxMonth = 0;
         for (long SumMonth : SumMonths) {
-            Month = Month + 1;
+            Month ++;
             if (CurrentMonth <= SumMonth) {
                 CurrentMonth = SumMonth;
                 MaxMonth = Month;
@@ -34,12 +34,12 @@ public class StatsService {
         return MaxMonth;
     }
 
-    public long minamountmonth(long SumMonths[]) {
+    public long minAmountMonth(long SumMonths[]) {
         long CurrentMonth = SumMonths[0];
         long Month = 0;
         long MinMonth = 0;
         for (long SumMonth : SumMonths) {
-            Month = Month + 1;
+            Month ++;
             if (CurrentMonth >= SumMonth) {
                 CurrentMonth = SumMonth;
                 MinMonth = Month;
@@ -48,23 +48,23 @@ public class StatsService {
         return MinMonth;
     }
 
-    public long calculateamountmaxmonth(long SumMonths[]) {
-        long CurrentMonth = averagesummonth(SumMonths);
+    public long calculateAmountMaxMonth(long SumMonths[]) {
+        long CurrentMonth = averageSumMonth(SumMonths);
         long MaxSumMonth = 0;
         for (long SumMonth : SumMonths) {
             if (CurrentMonth < SumMonth) {
-                MaxSumMonth = MaxSumMonth + 1;
+                MaxSumMonth ++;
             }
         }
         return MaxSumMonth;
     }
 
-    public long calculateamountminmonth(long SumMonths[]) {
-        long CurrentMonth = averagesummonth(SumMonths);
+    public long calculateAmountMinMonth(long SumMonths[]) {
+        long CurrentMonth = averageSumMonth(SumMonths);
         long MinSumMonth = 0;
         for (long SumMonth : SumMonths) {
             if (CurrentMonth > SumMonth) {
-                MinSumMonth = MinSumMonth + 1;
+                MinSumMonth ++;
             }
         }
         return MinSumMonth;

@@ -73,7 +73,7 @@ class StatsServiceTest {
     @MethodSource("ArraysForTestingTotalSumMonth")
     void TotalSum(long[] Month, long expected) {
         StatsService services = new StatsService();
-        long actual = services.totalsummonth(Month);
+        long actual = services.totalSumMonth(Month);
         assertEquals(expected, actual);
     }
 
@@ -81,7 +81,7 @@ class StatsServiceTest {
     @MethodSource("ArraysForTestingAverageSum")
     void AverageSum(long[] Month, long expected) {
         StatsService services = new StatsService();
-        long actual = services.averagesummonth(Month);
+        long actual = services.averageSumMonth(Month);
         assertEquals(expected, actual);
     }
 
@@ -89,7 +89,7 @@ class StatsServiceTest {
     @MethodSource("ArraysForTestingMaxSumMonth")
     void MaxSumMonth(long[] Month, long expected) {
         StatsService services = new StatsService();
-        long actual = services.maxamountmonth(Month);
+        long actual = services.maxAmountMonth(Month);
         assertEquals(expected, actual);
     }
 
@@ -97,7 +97,7 @@ class StatsServiceTest {
     @MethodSource("ArraysForTestingMinSumMonth")
     void MinSumMonth(long[] Month, long expected) {
         StatsService services = new StatsService();
-        long actual = services.minamountmonth(Month);
+        long actual = services.minAmountMonth(Month);
         assertEquals(expected, actual);
     }
 
@@ -105,7 +105,7 @@ class StatsServiceTest {
     @MethodSource("ArraysForTestingCalculateSumMaxMonth")
     void CalculateSumMaxMonth(long[] Month, long expected) {
         StatsService services = new StatsService();
-        long actual = services.calculateamountmaxmonth(Month);
+        long actual = services.calculateAmountMaxMonth(Month);
         assertEquals(expected, actual);
     }
 
@@ -113,7 +113,7 @@ class StatsServiceTest {
     @MethodSource("ArraysForTestingCalculateSumMinMonth")
     void CalculateSumMinMonth(long[] Month, long expected) {
         StatsService services = new StatsService();
-        long actual = services.calculateamountminmonth(Month);
+        long actual = services.calculateAmountMinMonth(Month);
         assertEquals(expected, actual);
     }
 
